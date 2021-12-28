@@ -1,0 +1,567 @@
+<!DOCTYPE HTML>
+<html lang ="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Henrik Wiiala H6b</title>
+  <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div class="header" id="header">
+      <h1>Header</h1>
+    </div>
+
+    <div class="sidebar">
+
+      <h3>Menu</h3>
+
+      <div class="menu-item" id="item-1">
+        <a href="#" class="images-facebook">Skull</a>
+        <img src="images/skull1.png">
+      </div>
+
+      <div class="menu-item" id="item-2">
+        <a href="#" class="images-location">Dragon</a>
+        <img src="images/dragonhead.png">
+      </div>
+
+      <div class="menu-item" id="item-3">
+        <a href="#" class="images-mail">Apple</a>
+        <img src="images/apple.png">
+      </div>
+
+      <div class="menu-item" id="item-4">
+        <a href="#" class="images-search">Forward</a>
+        <img src="images/forward.png">
+      </div>
+
+      <div class="menu-item" id="item-5">
+        <a href="#" class="images-settings">Home</a>
+        <img src="images/home.png">
+      </div>
+
+    </div>
+    
+    <div class="content" id="content">
+  
+      <h2>Styles.SCSS</h2><br>
+      
+      <p>
+        /* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ @import "compass/css3";
+ @import "compass/reset";
+
+ $theme-color: rgb(12, 247, 176);
+$background: #111;
+$sidenav: rgb(12, 88, 63);
+
+body {
+  margin: 0;
+  font-family: Roboto;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.sidebar {
+  margin: -3.8rem 0 0 0;
+  height: 105%;
+  width: 15rem;
+  position: fixed;
+  background-color: mix($sidenav, $background, 50%);
+  @include box-shadow(rgba(rgb(70, 146, 245), 0.6) 5px 5px 5px);
+
+  a {
+    padding: 12px 8px 12px 60px;
+    height: 60px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $background;
+  }
+
+  h3 {
+    color: #ffffff;
+    padding-left: 16px;
+  }
+
+  a:hover {
+    color: #fdfdfd;
+  }
+
+  .menu-item {
+    height: 60px;
+    padding-top: 30px;
+  }
+}
+
+.header {
+  top: 0;
+  height: 60px;
+  position: sticky;
+  margin-left: 15rem;
+  @include background-image(linear-gradient(rgb(6, 250, 238), rgb(0, 67, 70)));
+  color: invert($background);
+  text-align: center;
+  
+  h1 {
+    padding-top: 10px;
+    margin: auto;
+  }
+}
+
+.content {
+  top: 3rem;
+  margin-left: 15rem;
+  padding: 2rem 2rem 4rem 2rem;
+  min-height: 83vh;
+  background-color: rgb(171, 237, 253);
+
+  h1 {
+    margin-top: 0;
+    padding: auto;
+  }
+}
+
+#item-1 {
+  background-color: $theme-color;
+
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  left: 10px;
+
+  @include box-shadow(rgba(rgb(79, 245, 237), 0.6) -5px 5px 5px 2px);
+}
+
+#item-2 {
+  background-color: darken($color: $theme-color, $amount: 10%);
+
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 100px;
+
+  @include box-shadow(rgba(rgb(79, 245, 237), 0.6) 5px 5px 5px 2px);
+
+  img {
+    position: relative;
+    left: 70px;
+    top: 15px;
+  }
+
+  a {
+    position: relative;
+    right: 40px;
+  }
+}
+
+#item-3 {
+  background-color: lighten($color: $theme-color, $amount: 20%);
+
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -40px;
+  left: 10px;
+
+  @include box-shadow(rgba(rgb(79, 245, 237), 0.6) -5px 5px 5px 2px);
+
+  img {
+    position: relative;
+    left: 10px;
+    top: 5px;    
+  }
+
+  a {
+    position: relative;
+    right: 10px;
+  }
+}
+
+#item-4 {
+  background-color: mix(darken($theme-color, 20%), lighten($theme-color, 40%));
+
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -60px;
+  left: 100px;
+
+  @include box-shadow(rgba(rgb(79, 245, 237), 0.6) 5px 5px 5px 2px);
+
+  img {
+    position: relative;
+    left: 70px;
+    top: 15px;
+  }
+
+  a {
+    position: relative;
+    right: 40px;
+  }
+}
+
+#item-5 {
+  background-color: mix(darken($theme-color, 30%), lighten($theme-color, 60%));
+
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -80px;
+  left: 10px;
+
+  @include box-shadow(rgba(rgb(79, 245, 237), 0.6) -5px 5px 5px 2px);
+
+  img {
+    position: relative;
+    left: 10px;
+    top: 5px;    
+  }
+
+  a {
+    position: relative;
+    right: 10px;
+  }
+}
+
+.footer {
+  bottom: 0;
+  width: 90%;
+  margin: 0 0 0 15rem;
+  position: fixed;
+  @include background-image(linear-gradient(rgb(6, 250, 238), rgb(0, 67, 70)));
+  color: invert($background);
+  overflow-y: hidden;
+
+  p {
+    padding-left: 2rem;
+    position: relative;
+    text-align: center;
+  }
+}
+
+      </p>
+  
+      <h2>Styles.CSS</h2><br>
+     
+      <P>
+        /* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 13, ../sass/styles.scss */
+body {
+  margin: 0;
+  font-family: Roboto;
+}
+
+/* line 18, ../sass/styles.scss */
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+/* line 23, ../sass/styles.scss */
+.sidebar {
+  margin: -3.8rem 0 0 0;
+  height: 105%;
+  width: 15rem;
+  position: fixed;
+  background-color: #0f3528;
+  -moz-box-shadow: rgba(70, 146, 245, 0.6) 5px 5px 5px;
+  -webkit-box-shadow: rgba(70, 146, 245, 0.6) 5px 5px 5px;
+  box-shadow: rgba(70, 146, 245, 0.6) 5px 5px 5px;
+}
+/* line 31, ../sass/styles.scss */
+.sidebar a {
+  padding: 12px 8px 12px 60px;
+  height: 60px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #111;
+}
+/* line 39, ../sass/styles.scss */
+.sidebar h3 {
+  color: #ffffff;
+  padding-left: 16px;
+}
+/* line 44, ../sass/styles.scss */
+.sidebar a:hover {
+  color: #fdfdfd;
+}
+/* line 48, ../sass/styles.scss */
+.sidebar .menu-item {
+  height: 60px;
+  padding-top: 30px;
+}
+
+/* line 54, ../sass/styles.scss */
+.header {
+  top: 0;
+  height: 60px;
+  position: sticky;
+  margin-left: 15rem;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA2ZmFlZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwNDM0NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #06faee), color-stop(100%, #004346));
+  background-image: -moz-linear-gradient(#06faee, #004346);
+  background-image: -webkit-linear-gradient(#06faee, #004346);
+  background-image: linear-gradient(#06faee, #004346);
+  color: #eeeeee;
+  text-align: center;
+}
+/* line 63, ../sass/styles.scss */
+.header h1 {
+  padding-top: 10px;
+  margin: auto;
+}
+
+/* line 69, ../sass/styles.scss */
+.content {
+  top: 3rem;
+  margin-left: 15rem;
+  padding: 2rem 2rem 4rem 2rem;
+  min-height: 83vh;
+  background-color: #abedfd;
+}
+/* line 76, ../sass/styles.scss */
+.content h1 {
+  margin-top: 0;
+  padding: auto;
+}
+
+/* line 82, ../sass/styles.scss */
+#item-1 {
+  background-color: #0cf7b0;
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  left: 10px;
+  -moz-box-shadow: rgba(79, 245, 237, 0.6) -5px 5px 5px 2px;
+  -webkit-box-shadow: rgba(79, 245, 237, 0.6) -5px 5px 5px 2px;
+  box-shadow: rgba(79, 245, 237, 0.6) -5px 5px 5px 2px;
+}
+
+/* line 95, ../sass/styles.scss */
+#item-2 {
+  background-color: #07c98f;
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 100px;
+  -moz-box-shadow: rgba(79, 245, 237, 0.6) 5px 5px 5px 2px;
+  -webkit-box-shadow: rgba(79, 245, 237, 0.6) 5px 5px 5px 2px;
+  box-shadow: rgba(79, 245, 237, 0.6) 5px 5px 5px 2px;
+}
+/* line 108, ../sass/styles.scss */
+#item-2 img {
+  position: relative;
+  left: 70px;
+  top: 15px;
+}
+/* line 114, ../sass/styles.scss */
+#item-2 a {
+  position: relative;
+  right: 40px;
+}
+
+/* line 120, ../sass/styles.scss */
+#item-3 {
+  background-color: #6ffad0;
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -40px;
+  left: 10px;
+  -moz-box-shadow: rgba(79, 245, 237, 0.6) -5px 5px 5px 2px;
+  -webkit-box-shadow: rgba(79, 245, 237, 0.6) -5px 5px 5px 2px;
+  box-shadow: rgba(79, 245, 237, 0.6) -5px 5px 5px 2px;
+}
+/* line 133, ../sass/styles.scss */
+#item-3 img {
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
+/* line 139, ../sass/styles.scss */
+#item-3 a {
+  position: relative;
+  right: 10px;
+}
+
+/* line 145, ../sass/styles.scss */
+#item-4 {
+  background-color: #6bcbae;
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -60px;
+  left: 100px;
+  -moz-box-shadow: rgba(79, 245, 237, 0.6) 5px 5px 5px 2px;
+  -webkit-box-shadow: rgba(79, 245, 237, 0.6) 5px 5px 5px 2px;
+  box-shadow: rgba(79, 245, 237, 0.6) 5px 5px 5px 2px;
+}
+/* line 158, ../sass/styles.scss */
+#item-4 img {
+  position: relative;
+  left: 70px;
+  top: 15px;
+}
+/* line 164, ../sass/styles.scss */
+#item-4 a {
+  position: relative;
+  right: 40px;
+}
+
+/* line 170, ../sass/styles.scss */
+#item-5 {
+  background-color: #81b3a4;
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -80px;
+  left: 10px;
+  -moz-box-shadow: rgba(79, 245, 237, 0.6) -5px 5px 5px 2px;
+  -webkit-box-shadow: rgba(79, 245, 237, 0.6) -5px 5px 5px 2px;
+  box-shadow: rgba(79, 245, 237, 0.6) -5px 5px 5px 2px;
+}
+/* line 183, ../sass/styles.scss */
+#item-5 img {
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
+/* line 189, ../sass/styles.scss */
+#item-5 a {
+  position: relative;
+  right: 10px;
+}
+
+/* line 195, ../sass/styles.scss */
+.footer {
+  bottom: 0;
+  width: 90%;
+  margin: 0 0 0 15rem;
+  position: fixed;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA2ZmFlZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwNDM0NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #06faee), color-stop(100%, #004346));
+  background-image: -moz-linear-gradient(#06faee, #004346);
+  background-image: -webkit-linear-gradient(#06faee, #004346);
+  background-image: linear-gradient(#06faee, #004346);
+  color: #eeeeee;
+  overflow-y: hidden;
+}
+/* line 204, ../sass/styles.scss */
+.footer p {
+  padding-left: 2rem;
+  position: relative;
+  text-align: center;
+}
+      </P>
+
+    </div>
+  
+    <div class="footer" id="footer">
+
+      <p>Footer</p>
+
+    </div>
+
+  </body>
+  </html>

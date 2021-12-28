@@ -1,0 +1,209 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ @import "compass/css3";
+ @import "compass/reset";
+
+ $theme-color: rgb(12, 247, 176);
+$background: #111;
+$sidenav: rgb(12, 88, 63);
+
+body {
+  margin: 0;
+  font-family: Roboto;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.sidebar {
+  margin: -3.8rem 0 0 0;
+  height: 105%;
+  width: 15rem;
+  position: fixed;
+  background-color: mix($sidenav, $background, 50%);
+  @include box-shadow(rgba(rgb(70, 146, 245), 0.6) 5px 5px 5px);
+
+  a {
+    padding: 12px 8px 12px 60px;
+    height: 60px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $background;
+  }
+
+  h3 {
+    color: #ffffff;
+    padding-left: 16px;
+  }
+
+  a:hover {
+    color: #fdfdfd;
+  }
+
+  .menu-item {
+    height: 60px;
+    padding-top: 30px;
+  }
+}
+
+.header {
+  top: 0;
+  height: 60px;
+  position: sticky;
+  margin-left: 15rem;
+  @include background-image(linear-gradient(rgb(6, 250, 238), rgb(0, 67, 70)));
+  color: invert($background);
+  text-align: center;
+  
+  h1 {
+    padding-top: 10px;
+    margin: auto;
+  }
+}
+
+.content {
+  top: 3rem;
+  margin-left: 15rem;
+  padding: 2rem 2rem 4rem 2rem;
+  min-height: 83vh;
+  background-color: rgb(171, 237, 253);
+
+  h1 {
+    margin-top: 0;
+    padding: auto;
+  }
+}
+
+#item-1 {
+  background-color: $theme-color;
+
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  left: 10px;
+
+  @include box-shadow(rgba(rgb(79, 245, 237), 0.6) -5px 5px 5px 2px);
+}
+
+#item-2 {
+  background-color: darken($color: $theme-color, $amount: 10%);
+
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 100px;
+
+  @include box-shadow(rgba(rgb(79, 245, 237), 0.6) 5px 5px 5px 2px);
+
+  img {
+    position: relative;
+    left: 70px;
+    top: 15px;
+  }
+
+  a {
+    position: relative;
+    right: 40px;
+  }
+}
+
+#item-3 {
+  background-color: lighten($color: $theme-color, $amount: 20%);
+
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -40px;
+  left: 10px;
+
+  @include box-shadow(rgba(rgb(79, 245, 237), 0.6) -5px 5px 5px 2px);
+
+  img {
+    position: relative;
+    left: 10px;
+    top: 5px;    
+  }
+
+  a {
+    position: relative;
+    right: 10px;
+  }
+}
+
+#item-4 {
+  background-color: mix(darken($theme-color, 20%), lighten($theme-color, 40%));
+
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -60px;
+  left: 100px;
+
+  @include box-shadow(rgba(rgb(79, 245, 237), 0.6) 5px 5px 5px 2px);
+
+  img {
+    position: relative;
+    left: 70px;
+    top: 15px;
+  }
+
+  a {
+    position: relative;
+    right: 40px;
+  }
+}
+
+#item-5 {
+  background-color: mix(darken($theme-color, 30%), lighten($theme-color, 60%));
+
+  height: 100px;
+  width: 125px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -80px;
+  left: 10px;
+
+  @include box-shadow(rgba(rgb(79, 245, 237), 0.6) -5px 5px 5px 2px);
+
+  img {
+    position: relative;
+    left: 10px;
+    top: 5px;    
+  }
+
+  a {
+    position: relative;
+    right: 10px;
+  }
+}
+
+.footer {
+  bottom: 0;
+  width: 90%;
+  margin: 0 0 0 15rem;
+  position: fixed;
+  @include background-image(linear-gradient(rgb(6, 250, 238), rgb(0, 67, 70)));
+  color: invert($background);
+  overflow-y: hidden;
+
+  p {
+    padding-left: 2rem;
+    position: relative;
+    text-align: center;
+  }
+}
